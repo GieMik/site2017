@@ -11,25 +11,11 @@ html {
     width: 1050px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 $pad;
+    padding: $pad;
 }
 
 .block {
     display: block;
-}
-
-.flex {
-    display: flex;
-
-    @at-root &-column {
-        display: flex;
-        flex-direction: column;
-    }
-
-    @at-root &-row {
-        display: flex;
-        flex-direction: row;
-    }
 }
 
 .clr-white {

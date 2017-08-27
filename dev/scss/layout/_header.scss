@@ -15,7 +15,7 @@ header {
     align-items: flex-end;
 
     h1 {
-        margin: $pad 0;
+        // margin: $pad 0;
     }
 }
 
@@ -28,24 +28,28 @@ header {
 
     a {
         text-transform: lowercase;
+
+        & + a {
+            margin-left: 10px;
+        }
     }
 
     @at-root &-primary {
-        margin: $pad 0;
+        // margin: $pad 0;
 
         a {
             @extend .clr-white;
-            margin: 0 10px;
+            // margin: 0 10px;
         }
     }
 
     @at-root &-secondary {
-        margin: $pad 0;
+        // margin: $pad 0;
 
         a {
             @extend .clr-dark;
             @extend h5;
-            margin: 0 5px;
+            // margin: 0 5px;
         }
     }
 }
