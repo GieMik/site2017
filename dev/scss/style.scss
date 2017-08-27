@@ -22,6 +22,10 @@
 @import 'theme/settings';
 @import 'theme/typography';
 
+@import 'base/base';
+
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/main';
+
 @import 'layout/main';

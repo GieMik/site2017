@@ -1,0 +1,51 @@
+header {
+    background-color: $pink;
+    height: 117px;
+    
+    & > .container {
+        height: 100%;
+        @extend .flex;
+    }
+}
+
+.h-title {
+    flex: 2 0 auto;
+    color: $lightPink;
+    display: flex;
+    align-items: flex-end;
+
+    h1 {
+        margin: $pad 0;
+    }
+}
+
+.h-nav {
+    flex: 3 0 auto;
+    @extend .flex-column;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+
+    a {
+        text-transform: lowercase;
+    }
+
+    @at-root &-primary {
+        margin: $pad 0;
+
+        a {
+            @extend .clr-white;
+            margin: 0 10px;
+        }
+    }
+
+    @at-root &-secondary {
+        margin: $pad 0;
+
+        a {
+            @extend .clr-dark;
+            @extend h5;
+            margin: 0 5px;
+        }
+    }
+}
