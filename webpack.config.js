@@ -6,11 +6,11 @@ module.exports = {
 	entry: {
 		core: [
 			'babel-polyfill',
-			path.resolve(__dirname, './src/core.js')
+			path.resolve(__dirname, './dev/js/core.js')
 		]
 	},
 	output: {
-		path: path.resolve(__dirname, './dist/'),
+		path: path.resolve(__dirname, './js'),
 		publicPath: '/',
 		filename: '[name].js'
 	},
@@ -56,7 +56,7 @@ module.exports = {
 	},
 	devtool: '#source-map',
 	plugins: [
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('../css/style.css')
 	]
 }
 
