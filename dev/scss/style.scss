@@ -1,8 +1,15 @@
-body {
-    color: red;
-}
+@charset "UTF-8";
 
-.autoprefixer-test {
-    display: flex;
-    transform: scale(2,2);
-}
+/* -----------------------------------------------------------------------------
+    Author: GieMik8
+    Description: Site2017 style.
+    Email: giemik8@gmail.com
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+
+    Imports
+
+----------------------------------------------------------------------------- */
+
+@import '../../node_modules/normalize.css/normalize.css'; // Import from node_modules
