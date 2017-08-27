@@ -449,14 +449,82 @@ template {
   display: none;
 }
 /* -----------------------------------------------------------------------------
+
     Author: GieMik8
-    Description: Site2017 style.
+    Description: Site2017 style
     Email: giemik8@gmail.com
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
-
-    Imports
 
 ----------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/trebuchet-ms/Trebuchet MS.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/trebuchet-ms/Trebuchet MS Italic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/trebuchet-ms/Trebuchet MS Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Trebuchet MS";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/trebuchet-ms/Trebuchet MS Bold Italic.ttf") format("truetype"); }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-size: 100%; }
+
+.sans-serif, body {
+  font-family: 'Trebuchet MS', sans-serif; }
+
+.serif {
+  font-family: 'Time New Roman', Times, serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3.42857rem;
+  line-height: 2.8rem; }
+
+h2 {
+  font-size: 34px;
+  font-size: 2.42857rem; }
+
+h3 {
+  font-size: 22px;
+  font-size: 1.57143rem; }
+
+h4, p, i, a {
+  font-size: 16px;
+  font-size: 1.14286rem; }
+
+h5 {
+  font-size: 14px;
+  font-size: 1rem; }
+
+h6 {
+  font-size: 12px;
+  font-size: 0.85714rem; }
+
+p, i {
+  font-weight: 300;
+  margin: 5px 0 8px; }
 
 /*# sourceMappingURL=style.css.map*/

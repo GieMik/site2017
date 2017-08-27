@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+//
+//    Font imports
+//
+// -----------------------------------------------------------------------------
+
+@include font-face('Trebuchet MS', 'trebuchet-ms/Trebuchet MS', 400, normal, ttf);
+@include font-face('Trebuchet MS', 'trebuchet-ms/Trebuchet MS Italic', 400, italic, ttf);
+@include font-face('Trebuchet MS', 'trebuchet-ms/Trebuchet MS Bold', 700, normal, ttf);
+@include font-face('Trebuchet MS', 'trebuchet-ms/Trebuchet MS Bold Italic', 700, italic, ttf);
+
+// -----------------------------------------------------------------------------
+//
+//    Typography
+//
+// -----------------------------------------------------------------------------
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: $baseFontSize;
+}
+
+body {
+    font-size: 100%;
+    @extend .sans-serif;
+}
+
+.sans-serif {
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+.serif {
+    font-family: 'Time New Roman', Times, serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    @include fs($h1);
+    line-height: 2.8rem;
+}
+
+h2 {
+    @include fs($h2);
+}
+
+h3 {
+    @include fs($h3);
+}
+
+h4, p, i, a {
+    @include fs($h4);
+}
+
+h5 {
+    @include fs($h5);
+}
+
+h6 {
+    @include fs($h6);
+}
+
+p, i {
+    font-weight: 300;
+    margin: 5px 0 8px;
+}

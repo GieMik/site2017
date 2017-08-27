@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+//
+//    Custom breakpoints
+//
+// -----------------------------------------------------------------------------
+$breakpoints: (
+    'mobile-sm': 320px,     // .m-sm
+    'mobile-lg': 500px,     // .m-lg
+    'tablet-sm': 768px,     // .t-sm
+    'tablet-lg': 992px,     // .t-lg
+    'laptop-sm': 1200px,    // .l-sm
+    'laptop-lg': 1350px,    // .l-lg
+    'desktop-sm': 1600px,   // .d-sm
+    'desktop-lg': 1900px,   // .d-lg
+    'wide-sm': 2200px,      // .w-sm
+    'wide-lg': 2500px       // .w-lg
+);
+
+// -----------------------------------------------------------------------------
+//
+//    Media query mixin
+//
+// -----------------------------------------------------------------------------
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    } @else {
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

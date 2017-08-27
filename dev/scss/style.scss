@@ -1,15 +1,27 @@
 @charset "UTF-8";
 
 /* -----------------------------------------------------------------------------
+
     Author: GieMik8
-    Description: Site2017 style.
+    Description: Site2017 style
     Email: giemik8@gmail.com
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
-
-    Imports
 
 ----------------------------------------------------------------------------- */
+
+// -----------------------------------------------------------------------------
+//
+//    Imports
+//
+// -----------------------------------------------------------------------------
 
 @import '../../node_modules/normalize.css/normalize.css'; // Import from node_modules
+
+@import 'helpers/media_queries';
+@import 'helpers/mixins';
+
+@import 'theme/settings';
+@import 'theme/typography';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/main';
