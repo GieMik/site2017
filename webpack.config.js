@@ -21,6 +21,11 @@ module.exports = {
 		publicPath: '/',
 		filename: '[name].js'
 	},
+	resolve: {
+		alias: {
+			vue: 'vue/dist/vue.js'
+		},
+	},
 	module: {
 		rules: [
 			{
@@ -64,7 +69,12 @@ module.exports = {
 	devtool: '#source-map',
 	plugins: [
 		new SuppressEntryChunksPlugin(['grid', 'style']),
-		new ExtractTextPlugin('../css/[name].css')
+		new ExtractTextPlugin('../css/[name].css'),
+		new webpack.DefinePlugin({
+			'process.env': {
+			NODE_ENV: '"development"'
+		}
+		}),
 	]
 }
 
