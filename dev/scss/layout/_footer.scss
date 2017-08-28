@@ -11,6 +11,11 @@ footer {
     }
 }
 
+.f-title {
+    margin-left: $pad;
+    @include sans-serif;
+}
+
 .f-top {
 
 }
@@ -35,9 +40,6 @@ footer {
 .f-notes {
     p {
         @extend h5;
+        @include sans-serif;
     }
-}
-
-.f-title {
-    margin-left: $pad;
 }

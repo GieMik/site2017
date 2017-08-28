@@ -4,4 +4,24 @@
         column: 2 / 3;
         row: 2 / 3;
     }
+
+    nav {
+        a {
+            color: $blue;
+            display: block;
+            
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            &:hover {
+                color: $pink;
+            }
+        }
+        
+        .navigation-link {
+            border-bottom: solid 1px $gray2;
+            padding: 5px 0;
+        }
+    }
 }

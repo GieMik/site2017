@@ -1,4 +1,31 @@
 form {
     padding: $pad;
     border: solid 1px $gray3;
+    margin: $pad 0;
+}
+
+.form-field {
+    margin: 0 0 $pad;
+
+    label {
+        font-weight: 600;
+
+        & + input, textarea {
+            margin-top: 5px;
+        }
+    }
+
+    input, textarea {
+        border: solid 1px $gray3;
+        padding: 4px;
+        width: 100%;
+    }
+    
+    textarea {
+        min-height: 130px;
+    }
+}
+
+.form-submit {
+
 }

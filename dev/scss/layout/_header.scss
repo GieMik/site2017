@@ -13,10 +13,13 @@ header {
     color: $lightPink;
     display: flex;
     align-items: flex-end;
+}
 
-    h1 {
-        // margin: $pad 0;
-    }
+.site-title {
+    font-size: 60px;
+    margin-bottom: 0;
+    @extend .sans-serif;
+    line-height: 45px;
 }
 
 .h-nav {
@@ -39,17 +42,18 @@ header {
 
         a {
             @extend .clr-white;
-            // margin: 0 10px;
+            font-size: 20px;
+            @include sans-serif;
         }
     }
-
+    
     @at-root &-secondary {
         // margin: $pad 0;
-
+        
         a {
             @extend .clr-dark;
-            @extend h5;
-            // margin: 0 5px;
+            @extend h4;
+            @include sans-serif;
         }
     }
 }

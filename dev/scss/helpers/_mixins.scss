@@ -142,7 +142,19 @@
 //      Mixin to control font sizes in rem units
 //
 // -----------------------------------------------------------------------------
-@mixin fs($font-size, $svgHeight: 20px){
+@mixin fs($font-size){
     font-size: $font-size;
-    font-size: ($font-size/$baseFontSize)*1rem;
+}
+
+// -----------------------------------------------------------------------------
+//
+//      Mixins for setting Sans Serif and Serif
+//
+// -----------------------------------------------------------------------------
+@mixin sans-serif {
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+@mixin serif {
+    font-family: 'Time New Roman', Times, serif; 
 }

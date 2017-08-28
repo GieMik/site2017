@@ -54,3 +54,31 @@ a {
 .background-white {
     background-color: $F;
 }
+
+.no-margin {
+    margin: 0;
+}
+
+.btn {
+    background-color: $F;
+    border: solid 1px $gray3;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding: 7px 20px;
+    cursor: pointer;
+
+    &.btn-primary {
+        background-color: $pink;
+        text-transform: uppercase;
+        color: $F;
+        border-color: $pink;
+    }
+
+    &.btn-primary:hover {
+        background-color: darken($pink, 10%);
+    }
+}
+
+button, input {
+    @include sans-serif;
+}

@@ -21,7 +21,7 @@
   <header>
     <div class="container clr-white">
       <div class="h-title">
-        <h1>The Site</h1>
+        <h1 class="site-title">The Site</h1>
       </div>
       <div class="h-nav">
         <nav class="h-nav-secondary clr-dark">
@@ -42,7 +42,7 @@
   <main>
     <div class="container">
       <section class="page-content background-white">
-        <h1>Aenean ac diam nec neque fringilla</h1>
+        <h1 class="page-title">Aenean ac diam nec neque fringilla</h1>
         <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
            Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec
             iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
@@ -66,21 +66,21 @@
           Dorce pila meracone.</p>
       </article>
       <section class="page-related-posts background-white">
-        <h2>Aenean ac diam nec neque</h2>
+        <h3>Aenean ac diam nec neque</h3>
         <nav>
-          <a href="#" target="_blank">Integer eget mauris et urna</a>
-          <a href="#" target="_blank">Pulvinar consectetur hendrerit</a>
-          <a href="#" target="_blank">Oget mauris praesent</a>
+          <div class="navigation-link"><a href="#" target="_blank">Integer eget mauris et urna</a></div>
+          <div class="navigation-link"><a href="#" target="_blank">Pulvinar consectetur hendrerit</a></div>
+          <div class="navigation-link"><a href="#" target="_blank">Oget mauris praesent</a></div>
         </nav>
       </section>
       <aside class="page-sidebar">
         <section class="site-related-content">
-          <h2>Aenean ac diam nec neque fringilla</h2>
+          <h3>Aenean ac diam nec neque fringilla</h3>
           <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
              Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus.
               Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
         </section>
-        <form>
+        <form action="#">
           <div class="form-field">
             <label>First Name:</label>
             <input id="name" type="text" placeholder="Enter your name"></input>
@@ -94,20 +94,26 @@
             <textarea id="message"></textarea>
           </div>
           <div class="form-submit">
-            <input type="submit" value="Submit"></input>
+            <input class="btn btn-primary" type="submit" value="Submit"></input>
           </div>
         </form>
       </aside>
       <div class="site-additional-content">
-        <article>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
+        <article>
+          <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
            Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus.
-            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</article>
-        <article>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
+            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+        </article>
+        <article>
+          <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
            Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus.
-            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</article>
-        <article>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
+            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+        </article>
+        <article>
+          <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
            Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus.
-            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</article>
+            Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+        </article>
       </div>
     </div>
   </main>
@@ -126,7 +132,7 @@
       </div>
       <div class="f-bottom">
         <div class="f-notes">
-          <p>Nullam mattis luctus dolor, sed gravida tellus volutpat vel. Maecenas mollis
+          <p class="sans-serif">Nullam mattis luctus dolor, sed gravida tellus volutpat vel. Maecenas mollis
             augue sed tortor molestie ornare. Proin dapibus dictum eros ut adipiscing.
               Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque urna est,
               sit amet aliquet sapien accumsan quis. Nullam luctus semper vulputate. Nulla 
@@ -134,7 +140,7 @@
                 Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque</p>
         </div>
         <div class="f-title flex no-shrink">
-          <h2 class="pull-end">The Site</h2>
+          <h2 class="pull-end no-margin sans-serif">The Site</h2>
         </div>
       </div>
     </div>

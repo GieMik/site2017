@@ -3,7 +3,7 @@ a.clr-black:hover {
     color: $F;
 }
 
-a {
+* {
     transition: all $trans ease;
     
     &:hover {
