@@ -1,0 +1,66 @@
+@import '../theme/settings';
+@import '../helpers/media-queries';
+
+@for $i from 1 through 20 {
+    .basis-#{$i} {
+        flex-basis: #{$i * 5%};
+        flex-grow: 0;
+    }
+}
+
+.flex-wrap {
+    flex: {
+        wrap: wrap;
+    }
+}
+
+.flex-nowrap {
+    flex: nowrap;
+}
+
+.flex {
+    display: flex;
+
+    @at-root &-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @at-root &-row {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.pull-end {
+    align-self: flex-end;
+}
+
+// A map-set function (not included with Sass)
+@function map-set($map, $key, $value) {
+    $new: ($key: $value);
+    @return map-merge($map, $new);
+}
+
+$breakpointsReady: ();
+
+@each $break, $point in $breakpoints {
+    $newBreakpoint: ($break: $point);
+    $breakpointsReady: map-merge($breakpointsReady, $newBreakpoint);
+}
+
+// Create flex-basis media-queries classes
+@for $i from 1 through $grid-columns {
+    @each $break, $point in $breakpointsReady {
+        .#{$break}-basis-#{$i} {
+            @include mq($point) {
+                flex-basis: #{$i * (100/$grid-columns)*1%};
+                flex-grow: 0;
+            }
+        }
+    }
+}

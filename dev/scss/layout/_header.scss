@@ -4,7 +4,7 @@ header {
     
     & > .container {
         height: 100%;
-        @extend .flex;
+        display: flex;
     }
 }
 
@@ -21,7 +21,7 @@ header {
 
 .h-nav {
     flex: 3 0 auto;
-    @extend .flex-column;
+    flex-direction: column;
     display: flex;
     justify-content: space-between;
     text-align: right;

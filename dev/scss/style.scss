@@ -16,13 +16,13 @@
 
 @import '../../node_modules/normalize.css/normalize.css'; // Import from node_modules
 
-@import 'helpers/media_queries';
+@import 'helpers/media-queries';
 @import 'helpers/mixins';
 
 @import 'theme/settings';
 @import 'theme/typography';
 
-@import 'state/flex';
+@import 'state/state';
 
 @import 'base/base';
 
@@ -30,3 +30,10 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/main';
+
+@import 'modules/form';
+@import 'modules/page-additional-content';
+@import 'modules/page-related-content';
+@import 'modules/page-related-posts';
+@import 'modules/page-sidebar';
+@import 'modules/page-content';

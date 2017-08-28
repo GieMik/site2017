@@ -1,0 +1,16 @@
+.site-additional-content {
+    grid: {
+        column: 1 / -1;
+        row: 4 / -1;
+    }
+    display: grid;
+    background-color: $gray2;
+    grid: {
+        template-columns: repeat(3, 1fr);
+        column-gap: $pad;
+    }
+    padding: $pad;
+
+    & > article {
+    }
+}

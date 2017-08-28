@@ -22,6 +22,10 @@ html {
     color: $F;
 }
 
+a.clr-white:hover {
+    color: $gray5;
+}
+
 .clr-black {
     color: $B;
 }
@@ -45,4 +49,8 @@ a {
 
 .text-left {
     text-align: left;
+}
+
+.background-white {
+    background-color: $F;
 }

@@ -1,0 +1,20 @@
+a.clr-dark:hover,
+a.clr-black:hover {
+    color: $F;
+}
+
+a {
+    transition: all $trans ease;
+    
+    &:hover {
+        transition: all $trans ease;
+    }
+}
+
+.no-trans {
+    transition: none;
+
+    &:hover, & *:hover {
+        transition: none;
+    }
+}

@@ -1,5 +1,15 @@
 main {
     @extend .block;
     flex: 1 0 auto;
-    // display: none;
+    background-color: $gray1;
+
+    & > .container {
+        display: grid;
+        grid: {
+            template-columns: 6fr 6fr 5fr;
+            template-rows: repeat(3, auto);
+            column-gap: $pad;
+            row-gap: $pad;
+        }
+    }
 }

@@ -1,12 +1,19 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const SuppressEntryChunksPlugin = require('./suppress-entry-chunks-plugin')
 
 module.exports = {
 	entry: {
-		core: [
+		'core': [
 			'babel-polyfill',
 			path.resolve(__dirname, './dev/js/core.js')
+		],
+		'style': [
+			path.resolve(__dirname, './dev/scss/style.scss'),
+		],
+		'grid': [
+			path.resolve(__dirname, './dev/scss/grid.scss'),
 		]
 	},
 	output: {
@@ -56,7 +63,8 @@ module.exports = {
 	},
 	devtool: '#source-map',
 	plugins: [
-		new ExtractTextPlugin('../css/style.css')
+		new SuppressEntryChunksPlugin(['grid', 'style']),
+		new ExtractTextPlugin('../css/[name].css')
 	]
 }
 
