@@ -6,6 +6,34 @@ header {
         height: 100%;
         display: flex;
     }
+
+    &.sticky > .container {
+        padding: $pad/2 $pad;
+    }
+
+    &.sticky {
+        position: fixed;
+        // width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        animation: header $trans ease-out forwards;
+        height: auto;
+
+        .h-nav-secondary {
+            display: none;  
+        }
+
+        .site-title {
+            @extend h3;
+            margin: 0;
+            @include sans-serif;
+        }
+
+        .h-nav {
+            justify-content: center;
+        }
+    }
 }
 
 .h-title {
@@ -29,17 +57,19 @@ header {
     justify-content: space-between;
     text-align: right;
 
-    a {
+    &-item {
         text-transform: lowercase;
+        position: relative;
+    }
 
-        & + a {
-            margin-left: 10px;
-        }
+    &-item + &-item {
+        margin-left: $pad;
     }
 
     @at-root &-primary {
-        // margin: $pad 0;
-
+        display: flex;
+        justify-content: flex-end;
+        
         a {
             @extend .clr-white;
             font-size: 20px;
@@ -48,12 +78,47 @@ header {
     }
     
     @at-root &-secondary {
-        // margin: $pad 0;
+        display: flex;
+        justify-content: flex-end;
         
         a {
             @extend .clr-dark;
             @extend h4;
             @include sans-serif;
+        }
+    }
+
+    @at-root &-dropdown {
+        position: absolute;
+        top: 100%;
+        padding-top: 10px;
+        width: 150px;
+        text-align: left;
+        left: -30px;
+        animation: dropdown .2s ease-out forwards;
+        display: none;
+
+        .open & {
+            display: block;
+        }
+
+        &:before {
+            @include css-triangle($gray5, up, $size: 10px, $position: absolute, $round: false);
+            top: 0;
+            left: calc(50% - 10px);
+        }
+
+        a {
+            background-color: $gray5;
+            text-transform: none;
+            padding: 5px;
+            display: block;
+            font-size: $h5;
+        }
+
+        a:hover {
+            background-color: $gray4;
+            color: $F;
         }
     }
 }

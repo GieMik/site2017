@@ -1,0 +1,23 @@
+@keyframes header {
+    0% {
+        transform: translate(0, -70px);
+        // opacity: 0;
+    }
+    
+    100% {
+        transform: translate(0, 0);
+        // opacity: 1;
+    }
+}
+
+@keyframes dropdown {
+    0% {
+        transform: translate(0, 10px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

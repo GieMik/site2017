@@ -18,22 +18,49 @@
 
 <body>
   
-  <header id="header">
+  <header id="header" :class="{sticky}">
     <div class="container clr-white">
       <div class="h-title">
         <h1 class="site-title">The Site</h1>
       </div>
       <div class="h-nav">
         <nav class="h-nav-secondary clr-dark">
-          <a href="#">Menu Link</a>
-          <a href="#">Menu Link</a>
-          <a href="#">Menu Link</a>
+            <div class="h-nav-item"><a href="#">Menu Link</a></div>
+            <div class="h-nav-item"><a href="#">Menu Link</a></div>
+            <div class="h-nav-item"><a href="#">Menu Link</a></div>
         </nav>
         <nav class="h-nav-primary">
-          <a href="#">Menu Link</a>
-          <a href="#">Menu Link</a>
-          <a href="#">Menu Link</a>
-          <a href="#">Menu Link</a>
+          <div @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false" class="h-nav-item" :class="{'open': dropdownOpen}">
+            <a href="#">Menu Link</a>
+            <div v-show="dropdownOpen" class="h-nav-dropdown">
+              <a href="#">Integer eget mauris </a>
+              <a href="#">Pulvinar consectetur</a>
+              <a href="#">Oget mauris praesent</a>
+              <a href="#">Interdum justo</a>
+              <a href="#">Nec neque fringilla </a>
+            </div>
+          </div>
+          <div @mouseenter="dropdownOpen1 = true" @mouseleave="dropdownOpen1 = false" class="h-nav-item" :class="{'open': dropdownOpen1}">
+              <a href="#">Menu Link</a>
+              <div v-show="dropdownOpen1" class="h-nav-dropdown">
+                <a href="#">Integer eget mauris </a>
+                <a href="#">Pulvinar consectetur</a>
+                <a href="#">Oget mauris praesent</a>
+                <a href="#">Interdum justo</a>
+                <a href="#">Nec neque fringilla </a>
+              </div>
+            </div>
+          <div @mouseenter="dropdownOpen2 = true" @mouseleave="dropdownOpen2 = false" class="h-nav-item" :class="{'open': dropdownOpen2}">
+              <a href="#">Menu Link</a>
+              <div v-show="dropdownOpen2" class="h-nav-dropdown">
+                <a href="#">Integer eget mauris </a>
+                <a href="#">Pulvinar consectetur</a>
+                <a href="#">Oget mauris praesent</a>
+                <a href="#">Interdum justo</a>
+                <a href="#">Nec neque fringilla </a>
+              </div>
+            </div>
+          <div class="h-nav-item"><a href="#">Menu Link</a></div>
         </nav>
       </div>
     </div>

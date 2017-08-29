@@ -9093,10 +9093,29 @@ window.onload = function () {
     new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         el: '#header',
         data: {
-            test: 'Testas'
+            height: null,
+            sticky: false,
+            dropdownOpen: false,
+            dropdownOpen1: false,
+            dropdownOpen2: false
         },
         created: function created() {
             window.$Header = this;
+        },
+        mounted: function mounted() {
+            $Header.height = document.getElementsByTagName('header')[0].clientHeight;
+            window.addEventListener('scroll', $Header.handleScroll);
+        },
+
+        methods: {
+            handleScroll: function handleScroll() {
+                console.log(window.scrollY, $Header.height);
+                if (window.scrollY > $Header.height) {
+                    $Header.sticky = true;
+                } else if (window.scrollY < $Header.height) {
+                    $Header.sticky = false;
+                }
+            }
         }
     });
 };
