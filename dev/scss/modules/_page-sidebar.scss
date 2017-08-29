@@ -1,7 +1,16 @@
 .page-sidebar {
-    grid: {
-        column: 3 / -1;
-        row: 1 / 4;
+    @include mq('t-sm') {
+        grid: {
+            column: 4 / -1;
+            row: 3 / span 2;
+        }
+    }
+    
+    @include mq('t-lg') {
+        grid: {
+            column: 3 / -1;
+            row: 1 / 4;
+        }
     }
 }
 

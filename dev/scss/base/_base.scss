@@ -82,3 +82,23 @@ a {
 button, input {
     @include sans-serif;
 }
+
+.bars-btn {
+    color: $F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    
+    .bar {
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $F;
+    }
+}

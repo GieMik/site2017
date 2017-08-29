@@ -1,8 +1,20 @@
 .page-related-posts {
     padding: $pad;
-    grid: {
-        column: 2 / 3;
-        row: 2 / 3;
+    margin-bottom: $pad;
+    
+    @include mq('t-sm') {
+        margin-bottom: 0;
+        grid: {
+            column: 4 / -1;
+            row: 2 / span 1;
+        }
+    }
+    
+    @include mq('t-lg') {
+        grid: {
+            column: 2 / 3;
+            row: 2 / 3;
+        }
     }
 
     nav {

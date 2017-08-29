@@ -1,16 +1,26 @@
 .site-additional-content {
-    grid: {
-        column: 1 / -1;
-        row: 4 / -1;
-    }
     display: grid;
     background-color: $gray2;
-    grid: {
-        template-columns: repeat(3, 1fr);
-        column-gap: $pad;
-    }
     padding: $pad;
-
-    & > article {
+    
+    @include mq('t-sm') {
+        grid: {
+            template-columns: auto;
+            template-rows: repeat(3, auto);
+            column-gap: $pad;
+            column: 1 / 4;
+            row: 3 / span 2;
+        }
+        // align-content: center;
+        align-items: center;
+    }
+    
+    @include mq('t-lg') {
+        grid: {
+            template-columns: repeat(3, 1fr);
+            column-gap: $pad;
+            column: 1 / -1;
+            row: 4 / -1;
+        }
     }
 }

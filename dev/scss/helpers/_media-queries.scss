@@ -4,16 +4,16 @@
 //
 // -----------------------------------------------------------------------------
 $breakpoints: (
-    'mobile-sm': 320px,     // .m-sm
-    'mobile-lg': 500px,     // .m-lg
-    'tablet-sm': 768px,     // .t-sm
-    'tablet-lg': 992px,     // .t-lg
-    'laptop-sm': 1200px,    // .l-sm
-    'laptop-lg': 1350px,    // .l-lg
-    'desktop-sm': 1600px,   // .d-sm
-    'desktop-lg': 1900px,   // .d-lg
-    'wide-sm': 2200px,      // .w-sm
-    'wide-lg': 2500px       // .w-lg
+    'm-sm': 320px,     // .m-sm
+    'm-lg': 500px,     // .m-lg
+    't-sm': 768px,     // .t-sm
+    't-lg': 992px,     // .t-lg
+    'l-sm': 1200px,    // .l-sm
+    'l-lg': 1350px,    // .l-lg
+    'd-sm': 1600px,   // .d-sm
+    'd-lg': 1900px,   // .d-lg
+    'w-sm': 2200px,      // .w-sm
+    'w-lg': 2500px       // .w-lg
 );
 
 // -----------------------------------------------------------------------------

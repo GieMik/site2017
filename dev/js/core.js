@@ -13,10 +13,26 @@ window.onload = function () {
             sticky: false,
             dropdownOpen: false,
             dropdownOpen1: false,
-            dropdownOpen2: false
+            dropdownOpen2: false,
+            mobileMenuOpen: false
         },
         created() {
             window.$Header = this;
+        },
+        computed: {
+            headerClass() {
+                let classes = [];
+
+                if ($Header.sticky) {
+                    classes.push('sticky');
+                }
+
+                if ($Header.mobileMenuOpen) {
+                    classes.push('mobile-menu-open');
+                }
+
+                return classes;
+            }
         },
         mounted() {
             $Header.height = document.getElementsByTagName('header')[0].clientHeight;
@@ -24,7 +40,6 @@ window.onload = function () {
         },
         methods: {
             handleScroll() {
-                console.log(window.scrollY, $Header.height)
                 if (window.scrollY > $Header.height) {
                     $Header.sticky = true;
                 } else if (window.scrollY < $Header.height) {

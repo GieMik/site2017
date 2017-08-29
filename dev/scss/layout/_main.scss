@@ -2,14 +2,29 @@ main {
     @extend .block;
     flex: 1 0 auto;
     background-color: $gray1;
-
+    margin-top: 50px;
+    
+    @include mq('t-sm') {
+        margin-top: 0;        
+    }
+    
     & > .container {
         display: grid;
-        grid: {
-            template-columns: 6fr 6fr 5fr;
-            template-rows: repeat(3, auto);
-            column-gap: $pad;
-            row-gap: $pad;
+
+        @include mq('t-sm') {
+            grid: {
+                template-columns: repeat(6, 1fr);
+                template-rows: repeat(4, auto);
+                column-gap: $pad;
+                row-gap: $pad;
+            }
+        }
+        
+        @include mq('t-lg') {
+            grid: {
+                template-columns: 6fr 6fr 5fr;
+                template-rows: repeat(3, auto);
+            }
         }
     }
 }

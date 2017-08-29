@@ -18,10 +18,17 @@
 
 <body>
   
-  <header id="header" :class="{sticky}">
+  <header id="header" :class="headerClass">
     <div class="container clr-white">
       <div class="h-title">
         <h1 class="site-title">The Site</h1>
+      </div>
+      <div class="h-toggle" @click="mobileMenuOpen = !mobileMenuOpen">
+        <button class="bars-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
       <div class="h-nav">
         <nav class="h-nav-secondary clr-dark">
@@ -110,11 +117,11 @@
         <form action="#">
           <div class="form-field">
             <label>First Name:</label>
-            <input id="name" type="text" placeholder="Enter your name"></input>
+            <input id="name" type="text" placeholder="Enter your name">
           </div>
           <div class="form-field">
             <label>Last Name:</label>
-            <input id="lastName" type="text" placeholder="Enter your last name"></input>
+            <input id="lastName" type="text" placeholder="Enter your last name">
           </div>
           <div class="form-field">
             <label>Message:</label>

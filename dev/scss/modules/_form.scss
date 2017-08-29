@@ -2,6 +2,14 @@ form {
     padding: $pad;
     border: solid 1px $gray3;
     margin: $pad 0;
+    
+    @include mq('t-sm') {
+        margin: $pad 0 0;
+    }
+    
+    @include mq('t-lg') {
+        margin: $pad 0;
+    }
 }
 
 .form-field {

@@ -1,24 +1,51 @@
 header {
     background-color: $pink;
-    height: 117px;
-    
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include mq('t-sm', 'max') {
+        &.mobile-menu-open {
+            height: 100%;
+        }
+    }
+
+    @include mq('t-sm') {
+        height: 117px;
+        position: relative;
+    }
+
     & > .container {
         height: 100%;
         display: flex;
+        padding: $pad/2 $pad;
+
+        @include mq('t-sm') {
+            padding: $pad;
+        }
     }
 
     &.sticky > .container {
         padding: $pad/2 $pad;
+
+        @include mq('t-sm') {
+            padding: $pad;
+        }
     }
 
     &.sticky {
-        position: fixed;
-        // width: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        animation: header $trans ease-out forwards;
-        height: auto;
+        
+        @include mq('t-sm') {
+            animation: header $trans ease-out forwards;
+            position: fixed;
+            // width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+        }
 
         .h-nav-secondary {
             display: none;  
@@ -44,18 +71,40 @@ header {
 }
 
 .site-title {
-    font-size: 60px;
+    font-size: $h3;    
     margin-bottom: 0;
     @extend .sans-serif;
-    line-height: 45px;
+    line-height: 27px;
+    
+    @include mq('t-sm') {
+        line-height: 45px;
+        font-size: 60px;    
+    }
 }
 
 .h-nav {
     flex: 3 0 auto;
     flex-direction: column;
-    display: flex;
+    display: none;
     justify-content: space-between;
     text-align: right;
+
+    .mobile-menu-open & {
+        display: flex;
+    }
+
+    @include mq('t-sm', 'max') {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $pink;
+    }
+
+    @include mq('t-sm') {
+        display: flex;
+    }
 
     &-item {
         text-transform: lowercase;
@@ -91,7 +140,7 @@ header {
     @at-root &-dropdown {
         position: absolute;
         top: 100%;
-        padding-top: 10px;
+        padding-top: 20px;
         width: 150px;
         text-align: left;
         left: -30px;
@@ -103,9 +152,9 @@ header {
         }
 
         &:before {
-            @include css-triangle($gray5, up, $size: 10px, $position: absolute, $round: false);
-            top: 0;
-            left: calc(50% - 10px);
+            @include css-triangle($gray5, up, $size: 14px, $position: absolute, $round: false);
+            top: 6px;
+            left: calc(50% - 14px);
         }
 
         a {
@@ -120,5 +169,14 @@ header {
             background-color: $gray4;
             color: $F;
         }
+    }
+}
+
+.h-toggle {
+    display: flex;
+    align-items: center;
+
+    @include mq('t-sm') {
+        display: none;
     }
 }

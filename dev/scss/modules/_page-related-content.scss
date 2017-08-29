@@ -1,7 +1,19 @@
 .page-related-content {
     padding: $pad;
-    grid: {
-        column: 1 / 2;
-        row: 2 / 3;
+    margin-bottom: $pad;
+    
+    @include mq('t-sm') {
+        margin-bottom: 0;
+        grid: {
+            column: 1 / 4;
+            row: 2 / span 1;
+        }
+    }
+    
+    @include mq('t-lg') {
+        grid: {
+            column: 1 / 2;
+            row: 2 / 3;
+        }
     }
 }
