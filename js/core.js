@@ -9084,6 +9084,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 
 
+__webpack_require__(342);
+
 var inDevMode = "development" == 'development';
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.config.debug = inDevMode;
@@ -9104,16 +9106,21 @@ window.onload = function () {
             window.$Header = this;
         },
 
+        watch: {
+            mobileMenuOpen: function mobileMenuOpen() {
+                if ($Header.mobileMenuOpen) {
+                    document.querySelector('body').classList.add('mobile-menu-open');
+                } else {
+                    document.querySelector('body').classList.remove('mobile-menu-open');
+                }
+            }
+        },
         computed: {
             headerClass: function headerClass() {
                 var classes = [];
 
                 if ($Header.sticky) {
                     classes.push('sticky');
-                }
-
-                if ($Header.mobileMenuOpen) {
-                    classes.push('mobile-menu-open');
                 }
 
                 return classes;
@@ -19220,6 +19227,49 @@ return Vue$3;
 })));
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64)))
+
+/***/ }),
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */
+/***/ (function(module, exports) {
+
+var form = document.querySelector('form');
+
+var inputs = Array.from(document.querySelectorAll('input, textarea'));
+
+var inputErrors = Array.from(document.querySelectorAll('span.error'));
+
+inputs.map(function (input, index) {
+    input.onblur = function () {
+        if (input.value.length > 0) {
+            inputErrors[index].innerText = '';
+        } else {
+            inputErrors[index].innerText = 'Please fill this field';
+        }
+    };
+});
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    inputs.map(function (input) {
+        input.onblur();
+    });
+
+    if (name.value !== '' && lastName.value !== '' && message.value !== '') {
+        form.reset();
+        alert('Succesfully submitted');
+    }
+});
 
 /***/ })
 /******/ ]);

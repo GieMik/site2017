@@ -1,5 +1,7 @@
 import Vue from 'vue';
 
+require('./form')
+
 const inDevMode = process.env.NODE_ENV == 'development'
 
 Vue.config.debug = inDevMode; 
@@ -19,16 +21,21 @@ window.onload = function () {
         created() {
             window.$Header = this;
         },
+        watch: {
+            mobileMenuOpen() {
+                if ($Header.mobileMenuOpen) {
+                    document.querySelector('body').classList.add('mobile-menu-open');
+                } else {
+                    document.querySelector('body').classList.remove('mobile-menu-open');
+                }
+            }
+        },
         computed: {
             headerClass() {
                 let classes = [];
 
                 if ($Header.sticky) {
                     classes.push('sticky');
-                }
-
-                if ($Header.mobileMenuOpen) {
-                    classes.push('mobile-menu-open');
                 }
 
                 return classes;

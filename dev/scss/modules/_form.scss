@@ -32,8 +32,10 @@ form {
     textarea {
         min-height: 130px;
     }
-}
 
-.form-submit {
-
+    .error {
+        display: block;
+        margin-top: 5px;
+        color: $danger;
+    }
 }

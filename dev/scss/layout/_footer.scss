@@ -12,21 +12,32 @@ footer {
 }
 
 .f-title {
-    margin-left: $pad;
     @include sans-serif;
-}
+    margin: 0 0 $pad;
 
-.f-top {
-
+    @include mq('t-sm') {
+        margin: 0 0 0 $pad;
+    }
 }
 
 .f-bottom {
     display: flex;
+    flex-direction: column-reverse;
+
+    @include mq('t-sm') {
+        flex-direction: row;
+    }
 }
 
 .f-nav {
     // flex: 1 0 100%;
     margin-bottom: $pad;
+
+    @include mq('t-sm', 'max') {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
     a {
         text-transform: lowercase;

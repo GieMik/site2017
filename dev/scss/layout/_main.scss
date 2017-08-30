@@ -5,11 +5,15 @@ main {
     margin-top: 50px;
     
     @include mq('t-sm') {
-        margin-top: 0;        
+        margin-top: $headerHeight;        
     }
     
     & > .container {
         display: grid;
+        
+        @include mq('m-lg', 'max') {
+            padding: 0;
+        }
 
         @include mq('t-sm') {
             grid: {

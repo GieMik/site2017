@@ -6,15 +6,9 @@ header {
     left: 0;
     right: 0;
 
-    @include mq('t-sm', 'max') {
-        &.mobile-menu-open {
-            height: 100%;
-        }
-    }
-
     @include mq('t-sm') {
-        height: 117px;
-        position: relative;
+        height: $headerHeight;
+        position: absolute;
     }
 
     & > .container {
@@ -82,6 +76,63 @@ header {
     }
 }
 
+.mobile-menu-open .h-nav {
+    display: block;
+    padding: 40px;
+    overflow: auto;
+
+    .h-nav-primary {
+        display: block;
+        margin: $pad 0;
+
+        .h-nav-item {
+            margin: 40px 0;
+
+            a { 
+                font-weight: 600;
+                font-size: $h2;
+            }
+
+        }
+
+        .h-nav-dropdown {
+            display: block !important;
+            width: 100%;
+            left: 0;
+            position: relative;
+    
+            &:before {
+                display: none;
+            }
+    
+            a {
+                background-color: transparent;
+                font-size: $h3;
+                text-align: right;
+                margin: 10px 0;
+                color: rgba($F, .8);
+                font-weight: 400;
+            }
+        }
+    }
+
+    .h-nav-secondary {
+        display: flex;
+        // justify-content: space-around;
+        flex-direction: column;
+
+        .h-nav-item {
+            margin: 10px 0;
+            
+            a {
+                font-size: $h3;
+                margin: 10px 0;
+                color: $F;
+            }
+        }
+    }
+}
+
 .h-nav {
     flex: 3 0 auto;
     flex-direction: column;
@@ -89,13 +140,9 @@ header {
     justify-content: space-between;
     text-align: right;
 
-    .mobile-menu-open & {
-        display: flex;
-    }
-
     @include mq('t-sm', 'max') {
         position: fixed;
-        top: 0;
+        top: 50px;
         right: 0;
         bottom: 0;
         left: 0;

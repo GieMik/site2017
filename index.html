@@ -117,18 +117,21 @@
         <form action="#">
           <div class="form-field">
             <label>First Name:</label>
-            <input id="name" type="text" placeholder="Enter your name">
+            <input id="name" type="text" placeholder="Type your name">
+            <span id="nameError" class="error"></span>
           </div>
           <div class="form-field">
             <label>Last Name:</label>
-            <input id="lastName" type="text" placeholder="Enter your last name">
+            <input id="lastName" type="text" placeholder="Type your last name">
+            <span id="lastNameError" class="error"></span>
           </div>
           <div class="form-field">
             <label>Message:</label>
-            <textarea id="message"></textarea>
+            <textarea placeholder="Type your Message" id="message"></textarea>
+            <span id="messageError" class="error"></span>
           </div>
           <div class="form-submit">
-            <input class="btn btn-primary" type="submit" value="Submit"></input>
+            <button id="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </aside>

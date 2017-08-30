@@ -3,6 +3,18 @@
     background-color: $gray2;
     padding: $pad;
     
+    article {
+        margin: $pad 0 0;
+
+        &:first-of-type {
+            margin: 0;
+        }
+
+        @include mq('t-sm') {
+            margin: 0;
+        }
+    }
+
     @include mq('t-sm') {
         grid: {
             template-columns: auto;
