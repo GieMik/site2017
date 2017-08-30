@@ -102,3 +102,7 @@ button, input, textarea {
         background-color: $F;
     }
 }
+
+*:focus {
+    outline: none;
+}

@@ -684,6 +684,9 @@ button, input, textarea {
     height: 1px;
     background-color: #FFF; }
 
+*:focus {
+  outline: none; }
+
 html {
   width: 100%;
   height: 100%; }
@@ -1019,6 +1022,10 @@ form {
     border: solid 1px #898989;
     padding: 4px;
     width: 100%; }
+    .form-field input:focus, .form-field textarea:focus {
+      -webkit-box-shadow: 0 0 5px rgba(211, 19, 90, 0.4);
+              box-shadow: 0 0 5px rgba(211, 19, 90, 0.4);
+      border-color: #D3135A; }
   .form-field textarea {
     min-height: 130px; }
   .form-field .error {
@@ -1030,12 +1037,12 @@ form {
   display: grid;
   background-color: #CCC;
   padding: 20px; }
-  .site-additional-content article {
+  .site-additional-content p {
     margin: 20px 0 0; }
-    .site-additional-content article:first-of-type {
+    .site-additional-content p:first-of-type {
       margin: 0; }
     @media only screen and (min-width: 768px) {
-      .site-additional-content article {
+      .site-additional-content p {
         margin: 0; } }
   @media only screen and (min-width: 768px) {
     .site-additional-content {

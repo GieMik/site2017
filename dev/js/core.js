@@ -1,6 +1,9 @@
 require('./form')
 
 window.onload = () => {
+    const header = document.querySelector('header');
+    const menuToggle = document.querySelector('.h-toggle');
+    const body = document.querySelector('body');
 
     Array.from(document.querySelectorAll('.dropdown-inside')).map(item => {
         item.onmouseenter = () => { 
@@ -11,8 +14,6 @@ window.onload = () => {
         }
     })
 
-    const header = document.querySelector('header');
-
     window.onscroll = () => {
         if (window.scrollY > header.clientHeight) {
             header.classList.add('sticky')
@@ -20,10 +21,6 @@ window.onload = () => {
             header.classList.remove('sticky')
         }
     }
-
-    const menuToggle = document.querySelector('.h-toggle');
-
-    const body = document.querySelector('body');
 
     menuToggle.onclick = () => {
         body.classList.toggle('mobile-menu-open');

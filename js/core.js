@@ -9082,6 +9082,9 @@ module.exports = function (regExp, replace) {
 __webpack_require__(342);
 
 window.onload = function () {
+    var header = document.querySelector('header');
+    var menuToggle = document.querySelector('.h-toggle');
+    var body = document.querySelector('body');
 
     Array.from(document.querySelectorAll('.dropdown-inside')).map(function (item) {
         item.onmouseenter = function () {
@@ -9092,8 +9095,6 @@ window.onload = function () {
         };
     });
 
-    var header = document.querySelector('header');
-
     window.onscroll = function () {
         if (window.scrollY > header.clientHeight) {
             header.classList.add('sticky');
@@ -9101,10 +9102,6 @@ window.onload = function () {
             header.classList.remove('sticky');
         }
     };
-
-    var menuToggle = document.querySelector('.h-toggle');
-
-    var body = document.querySelector('body');
 
     menuToggle.onclick = function () {
         body.classList.toggle('mobile-menu-open');
