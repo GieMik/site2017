@@ -25,7 +25,7 @@ header {
         padding: $pad/2 $pad;
 
         @include mq('t-sm') {
-            padding: $pad;
+            padding: 12px $pad;
         }
     }
 

@@ -1,10 +1,6 @@
 footer {
     background-color: $gray4;
     @extend .clr-white;
-    
-    & > .container {
-        // display: flex;
-    }
 
     a {
         @extend .clr-white;

@@ -1,58 +1,31 @@
-import Vue from 'vue';
-
 require('./form')
 
-const inDevMode = process.env.NODE_ENV == 'development'
+window.onload = () => {
 
-Vue.config.debug = inDevMode; 
-Vue.config.devtools = inDevMode;
-
-window.onload = function () {
-    new Vue({
-        el: '#header',
-        data: {
-            height: null,
-            sticky: false,
-            dropdownOpen: false,
-            dropdownOpen1: false,
-            dropdownOpen2: false,
-            mobileMenuOpen: false
-        },
-        created() {
-            window.$Header = this;
-        },
-        watch: {
-            mobileMenuOpen() {
-                if ($Header.mobileMenuOpen) {
-                    document.querySelector('body').classList.add('mobile-menu-open');
-                } else {
-                    document.querySelector('body').classList.remove('mobile-menu-open');
-                }
-            }
-        },
-        computed: {
-            headerClass() {
-                let classes = [];
-
-                if ($Header.sticky) {
-                    classes.push('sticky');
-                }
-
-                return classes;
-            }
-        },
-        mounted() {
-            $Header.height = document.getElementsByTagName('header')[0].clientHeight;
-            window.addEventListener('scroll', $Header.handleScroll);
-        },
-        methods: {
-            handleScroll() {
-                if (window.scrollY > $Header.height) {
-                    $Header.sticky = true;
-                } else if (window.scrollY < $Header.height) {
-                    $Header.sticky = false;
-                }
-            }
+    Array.from(document.querySelectorAll('.dropdown-inside')).map(item => {
+        item.onmouseenter = () => { 
+            item.classList.add('open')
         }
-    });
+        item.onmouseleave = () => { 
+            item.classList.remove('open')
+        }
+    })
+
+    const header = document.querySelector('header');
+
+    window.onscroll = () => {
+        if (window.scrollY > header.clientHeight) {
+            header.classList.add('sticky')
+        } else if (window.scrollY < header.clientHeight) {
+            header.classList.remove('sticky')
+        }
+    }
+
+    const menuToggle = document.querySelector('.h-toggle');
+
+    const body = document.querySelector('body');
+
+    menuToggle.onclick = () => {
+        body.classList.toggle('mobile-menu-open');
+    }
 }

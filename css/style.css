@@ -728,7 +728,7 @@ header {
     padding: 10px 20px; }
     @media only screen and (min-width: 768px) {
       header.sticky > .container {
-        padding: 20px; } }
+        padding: 12px 20px; } }
   @media only screen and (min-width: 768px) {
     header.sticky {
       -webkit-animation: header 0.3s ease-out forwards;
