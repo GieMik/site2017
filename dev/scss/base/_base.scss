@@ -66,17 +66,6 @@ a {
     font-weight: 500;
     padding: 7px 20px;
     cursor: pointer;
-
-    &.btn-primary {
-        background-color: $pink;
-        text-transform: uppercase;
-        color: $F;
-        border-color: $pink;
-    }
-
-    &.btn-primary:hover {
-        background-color: darken($pink, 10%);
-    }
 }
 
 button, input, textarea {
@@ -101,8 +90,4 @@ button, input, textarea {
         height: 1px;
         background-color: $F;
     }
-}
-
-*:focus {
-    outline: none;
 }

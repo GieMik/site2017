@@ -18,3 +18,20 @@ a.clr-black:hover {
         transition: none;
     }
 }
+
+*:focus {
+    outline: none;
+}
+
+.btn {
+    &.btn-primary {
+        background-color: $pink;
+        text-transform: uppercase;
+        color: $F;
+        border-color: $pink;
+    }
+
+    &.btn-primary:hover {
+        background-color: darken($pink, 10%);
+    }
+}
