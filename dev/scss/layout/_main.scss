@@ -19,8 +19,9 @@ main {
             grid: {
                 template-columns: repeat(6, 1fr);
                 template-rows: repeat(4, auto);
-                column-gap: $pad;
-                row-gap: $pad;
+                // column-gap: $pad;
+                // row-gap: $pad;
+                gap: $pad;
             }
         }
         

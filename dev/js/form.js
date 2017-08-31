@@ -4,6 +4,10 @@ const inputs = Array.from(document.querySelectorAll('input, textarea'));
 
 const inputErrors = Array.from(document.querySelectorAll('span.error'));
 
+const name = document.querySelector('#name')
+const lastName = document.querySelector('#lastName')
+const message = document.querySelector('#message')
+
 inputs.map((input, index) => {
     input.onblur = () => {
         if (input.value.length > 0) {

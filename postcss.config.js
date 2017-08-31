@@ -1,8 +1,9 @@
 module.exports = {
   plugins: [
     require('autoprefixer')({
-      browsers: ['ie >= 9', '> 1%', 'last 12 versions'],
-      grid: false
+      browsers: ['ie >= 8', '> 1%', 'last 5 versions'],
+      grid: true,
+      flex: true
     })
   ]
 };

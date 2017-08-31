@@ -38,3 +38,12 @@
 @import 'modules/page-related-posts';
 @import 'modules/page-sidebar';
 @import 'modules/page-content';
+
+// Support for Edge
+@supports (-ms-ime-align:auto) {
+    @import 'support/edge';
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@import 'support/ie'
+}

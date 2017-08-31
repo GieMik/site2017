@@ -1,7 +1,10 @@
 form {
     padding: $pad;
-    border: solid 1px $gray3;
     margin: $pad 0;
+
+    @include mq('m-lg') {
+        border: solid 1px $gray3;
+    }
     
     @include mq('t-sm') {
         margin: $pad 0 0;

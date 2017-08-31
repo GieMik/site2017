@@ -1,0 +1,69 @@
+@include mq('t-sm' ,'max') {
+    main > .container,
+    .site-additional-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include mq('t-sm') {
+    .page-content {
+        margin: 0 0 $pad 0;
+    }
+
+    .page-sidebar {
+        margin: 0 0 0 $pad/2;
+    }
+
+    .page-related-content {
+        margin: 0 $pad/2 $pad 0;
+    }
+
+    .page-related-posts {
+        margin: 0 0 $pad $pad/2;
+    }
+
+    .site-additional-content {
+        display: block;
+        margin-right: $pad/2;
+
+        p + p {
+            margin-top: 80px;
+        }
+    }
+}
+
+@include mq('t-lg') {
+    .page-content {
+        margin: 0 $pad/2 $pad 0;
+    }
+
+    .page-sidebar {
+        margin: 0 0 $pad $pad/2;
+    }
+
+    .page-related-content {
+        margin: 0 $pad/2 $pad 0;
+    }
+
+    .page-related-posts {
+        margin: 0 $pad/2 $pad $pad/2;
+    }
+
+    .site-additional-content {
+        display: block;
+
+        p {
+            display: inline-block;
+            width: 30%;
+        }
+
+        p:first-of-type {
+            margin-right: 4%;
+        }
+
+        p:last-of-type {
+            margin-left: 4%;
+        }
+    }
+}
