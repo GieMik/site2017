@@ -14,6 +14,15 @@ module.exports = {
 		],
 		'grid': [
 			path.resolve(__dirname, './dev/scss/grid.scss'),
+		],
+		'ie9-max-t-sm': [
+			path.resolve(__dirname, './dev/scss/support/ie9-max-t-sm.scss'),
+		],
+		'ie9-t-sm': [
+			path.resolve(__dirname, './dev/scss/support/ie9-t-sm.scss'),
+		],
+		'ie9-t-lg': [
+			path.resolve(__dirname, './dev/scss/support/ie9-t-lg.scss'),
 		]
 	},
 	output: {
@@ -68,7 +77,7 @@ module.exports = {
 	},
 	devtool: '#source-map',
 	plugins: [
-		new SuppressEntryChunksPlugin(['grid', 'style']),
+		new SuppressEntryChunksPlugin(['grid', 'style', 'ie9-max-t-sm', 'ie9-t-sm', 'ie9-t-lg']),
 		new ExtractTextPlugin('../css/[name].css'),
 		new webpack.DefinePlugin({
 			'process.env': {

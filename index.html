@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
 <head>
 
   <meta charset="utf-8">
@@ -11,17 +13,14 @@
   <meta name="description" content="Test site 2017">
   <meta name="author" content="GieMik8">
 
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/style.css">
-
-    <!--[if !IE]><!-->
-    <script>
-      if (/*@cc_on!@*/false && document.documentMode === 10) {
-        document.documentElement.className+=' ie10';
-        console.log('This is IE')
-      }
-    </script>
-    <!--<![endif]-->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    
+    <!--[if IE 9]>
+      <link media='screen and (max-width: 767px)' rel="stylesheet" href="css/ie9-max-t-sm.css">
+      <link media='screen and (min-width: 768px)' rel="stylesheet" href="css/ie9-t-sm.css">
+      <link media='screen and (min-width: 992px)' rel="stylesheet" href="css/ie9-t-lg.css">
+    <![endif]-->
 
 </head>
 
@@ -30,7 +29,7 @@
   <header id="header">
     <div class="container clr-white">
       <div class="h-title">
-        <a href="#"><h2 class="site-title clr-white">The Site</h2></a>
+        <a href="#"><h2 class="site-title">The Site</h2></a>
       </div>
       <div class="h-toggle">
         <button class="bars-btn">
@@ -84,6 +83,9 @@
 
   <main>
     <div class="container">
+      <!--[if IE 9]>
+        <div class="main-page-wrapper">
+      <![endif]-->
       <section class="page-content background-white">
         <h1 class="page-title">Aenean ac diam nec neque fringilla</h1>
         <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris.
@@ -116,6 +118,9 @@
           <div class="navigation-link"><a href="#" target="_blank">Oget mauris praesent</a></div>
         </nav>
       </section>
+      <!--[if IE 9]>
+        </div>
+      <![endif]-->
       <aside class="page-sidebar">
         <section class="site-related-content">
           <h3>Aenean ac diam nec neque fringilla</h3>
@@ -180,12 +185,13 @@
                 Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque</p>
         </div>
         <div class="f-title flex no-shrink">
-          <h2 class="pull-end no-margin sans-serif">The Site</h2>
+          <a href="#" class="pull-end no-margin"><h2 class="sans-serif">The Site</h2></a>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="js/core.js"></script>
+
 </body>
 </html>

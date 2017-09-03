@@ -66,12 +66,17 @@ header {
 .site-title {
     font-size: $h3;    
     margin-bottom: 0;
+    color: $lightPink;
     @extend .sans-serif;
     line-height: 27px;
     
     @include mq('t-sm') {
         line-height: 45px;
         font-size: 60px;    
+    }
+
+    &:hover {
+        color: $F;
     }
 }
 

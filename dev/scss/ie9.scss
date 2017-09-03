@@ -1,0 +1,21 @@
+@import 'helpers/media-queries';
+
+header {
+    & > .container {
+        display: block;
+    }
+}
+
+.h {
+    @at-root &-nav {
+        display: block;
+    }
+    
+    @at-root &-toggle {
+        display: block;
+    }
+    
+    @at-root &-title {
+        display: block;
+    }
+}

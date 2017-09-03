@@ -1,0 +1,33 @@
+@import '../theme/settings';
+
+.page-sidebar {
+    display: inline-block;
+    width: 30%;
+    float: right;
+    clear: none;
+}
+
+.main-page-wrapper {
+    display: inline-block;
+    width: 68%;
+    float: left;
+    clear: none;
+    margin-bottom: $pad;
+}
+
+.site-additional-content {
+    display: block;
+
+    p {
+        display: inline-block;
+        width: 30%;
+    }
+
+    p:first-of-type {
+        margin-right: 4%;
+    }
+
+    p:last-of-type {
+        margin-left: 4%;
+    }
+}

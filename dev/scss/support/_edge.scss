@@ -51,6 +51,7 @@
     .site-additional-content {
         padding-left: $pad/-2;
         padding-right: $pad/-2;
+        flex-direction: row;
 
         @for $i from 1 through 3 {
             p:nth-of-type(#{$i}) {

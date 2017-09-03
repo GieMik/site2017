@@ -1,0 +1,126 @@
+@import '../helpers/media-queries';
+@import '../theme/settings';
+
+header {
+    & > .container {
+        display: block;
+        position: relative;
+        max-width: 100%;
+    }
+    
+    &.sticky > .container {
+        height: 50px;
+    }
+}
+
+main {
+    display: block;
+    clear: both;
+    float: left;
+    height: 100%;
+    max-width: 100%;
+}
+
+.h {
+    @at-root &-title {
+        display: inline-block;
+        width: 35%;
+        float: left;
+        height: 100%;
+        position: relative;
+
+        a {
+            position: absolute;
+            bottom: 0;            
+        }
+    }
+    
+    @at-root &-nav {
+        display: inline-block;
+        width: 60%;
+        float: right;
+        left: auto;
+        right: 0;
+        top: 0;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.h-nav {
+    @at-root &-primary {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    @at-root &-secondary {
+        display: block;
+        text-align: right;
+    }
+    
+    @at-root &-item {
+        display: inline-block;
+        text-align: right;
+    }
+}
+
+.main-page-wrapper {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+.page-content {
+    margin-bottom: $pad;
+    display: block;
+}
+
+.page-related-content {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    height: 175px;
+    float: right;
+    clear: left;
+}
+
+.page-related-posts {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    height: 175px;
+    float: left;
+}
+
+.page-sidebar {
+    display: block;
+    margin: $pad 0;
+    float: left;
+    clear: both;
+}
+
+.site-additional-content {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: $pad;
+
+    p {
+        margin-bottom: $pad !important;
+    }
+}
+
+footer {
+    float: left;
+    clear: both;
+    display: block;
+    float: left;
+    max-width: 100%;
+    width: 100%;
+    
+    .f-title {
+        margin: $pad 0 0 0;
+    }
+}

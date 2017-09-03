@@ -1,4 +1,4 @@
-# site2017# client
+# site2017
 
 > A simple site page for improving scss skills
 
