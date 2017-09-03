@@ -1,24 +1,2 @@
-.page-sidebar {
-  display: inline-block;
-  width: 30%;
-  float: right;
-  clear: none; }
-
-.main-page-wrapper {
-  display: inline-block;
-  width: 68%;
-  float: left;
-  clear: none;
-  margin-bottom: 20px; }
-
-.site-additional-content {
-  display: block; }
-  .site-additional-content p {
-    display: inline-block;
-    width: 30%; }
-  .site-additional-content p:first-of-type {
-    margin-right: 4%; }
-  .site-additional-content p:last-of-type {
-    margin-left: 4%; }
-
+.page-sidebar{display:inline-block;width:30%;float:right;clear:none}.main-page-wrapper{display:inline-block;width:68%;float:left;clear:none;margin-bottom:20px}.site-additional-content{display:block}.site-additional-content p{display:inline-block;width:30%}.site-additional-content p:first-of-type{margin-right:4%}.site-additional-content p:last-of-type{margin-left:4%}
 /*# sourceMappingURL=ie9-t-lg.css.map*/
